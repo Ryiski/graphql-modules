@@ -9,13 +9,10 @@
     "website"
   ],
   "scripts": {
-    "prepare": "husky install",
-    "postinstall": "patch-package",
     "ts:check": "tsc --project tsconfig.json --noEmit",
     "ci:lint": "eslint \"packages/**/*.{js,jsx,ts,tsx}\" --output-file eslint_report.json --format json",
     "build": "tsc --project tsconfig.json && bob build",
     "test": "jest",
-    "prerelease": "yarn build",
     "release": "changeset publish",
     "format": "prettier --cache --ignore-path .gitignore --ignore-path .prettierignore --check --write \"{packages,website}/**/*.{js,jsx,json,css,md,mdx,ts,tsx}\"",
     "pr": "changeset",
