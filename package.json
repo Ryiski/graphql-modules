@@ -9,6 +9,7 @@
     "website"
   ],
   "scripts": {
+    "postinstall": "yarn install && yarn build",
     "ts:check": "tsc --project tsconfig.json --noEmit",
     "ci:lint": "eslint \"packages/**/*.{js,jsx,ts,tsx}\" --output-file eslint_report.json --format json",
     "build": "tsc --project tsconfig.json && bob build",
